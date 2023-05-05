@@ -1,0 +1,150 @@
+:root {}
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #343541;
+    color: #c5c5d2;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.message-container {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.message-container>.search {
+    position: relative;
+    width: 100%;
+    max-width: 48rem;
+    font-size: 0.75rem;
+    background-color: #40414f;
+    padding: 12px;
+    border-radius: 4px;
+}
+
+.message-container>.search>textarea {
+    width: calc(100% - 24px);
+    resize: none;
+    overflow: hidden;
+    border: none;
+    font-size: 18px;
+    background-color: transparent;
+    outline: none;
+    color: white;
+    white-space: pre;
+}
+
+.message-container>.search>button {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+
+    width: 24px;
+    height: 24px;
+    border: none;
+    background-color: transparent;
+    color: #858597;
+}
+
+.message-container>.search>button * {
+    color: #858597;
+    fill: #858597;
+}
+
+#info {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 15vw;
+    width: 100%;
+    height: 100%;
+}
+
+#info>div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#info>div>div {
+    width: 33.33%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 16px;
+}
+
+#info>div>div>p {
+    background-color: #40414f;
+    color: white;
+    width: 100%;
+    padding: 16px;
+    border-radius: 4px;
+}
+
+#chat {
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    max-height: calc(100% - 90px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#chat>p {
+    position: relative;
+    width: 100%;
+    padding: 16px 25vw;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+#chat>p.b {
+    background-color: #444654;
+}
+
+#chat>p>img.loading {
+    height: 16px;
+    transform: scale(3) translate(15%);
+}
+
+#chat>p>img.abyss {
+    height: 50px;
+}
+
+#chat>p.b::before {
+    content: '';
+    position: absolute;
+    left: 25vw;
+    top: 14px;
+    width: 30px;
+    height: 30px;
+    border-radius: .125em;
+    transform: translateX(calc(-16px - 30px));
+
+    background-image: url('https://cdn.discordapp.com/icons/985017702433316924/7d7dd41eafbabd876403faf116067eea.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
